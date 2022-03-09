@@ -1,36 +1,22 @@
 
-let emoji = String.fromCodePoint(0x1F621);
-let emoji2 = String.fromCodePoint(128525);
-
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(` ${emoji2}${emoji2}${emoji2}ssertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`${emoji}${emoji}${emoji}Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
-
-
-
 const letterPositions = function (sentence) {
+  let newSentence = sentence.toLowerCase();
     let results = {};
+    let index = 0;
     
-    for (let letter of sentence) {
+    for (const letter of newSentence) {
         if (results[letter]) {
-            results.push.indexOf(letter);
+            results[letter].push(index);
          
-
         } else {
-            results.push.indexOf(letter) ;
+            results[letter] = [index];
         
         }
-
+  index++
     }
     return results;
 }
 
 
 
-console.log(letterPositions("LHL"));
+console.log(letterPositions("Lighthouselabs"));
