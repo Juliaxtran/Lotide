@@ -1,6 +1,5 @@
 
 
-const eqArrays = require('../eqArray.js');
 const assertArraysEqual = require('../assertArrayEqual');
 
 let arr1 = [1,2,3];
