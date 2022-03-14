@@ -1,4 +1,4 @@
-const head = require('../head.js');
+const {assertEqual, emoji, emoji2} = require('../assertEqual');
 const assertEqual = require('../assertEqual');
 
 

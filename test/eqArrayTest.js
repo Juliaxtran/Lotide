@@ -1,4 +1,4 @@
-const assertEqual = require('../assertEqual');
+const {assertEqual, emoji, emoji2} = require('../assertEqual');
 const eqArrays = require('../eqArray.js')
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);

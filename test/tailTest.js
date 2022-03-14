@@ -1,5 +1,5 @@
 const tail = require('../tail.js');
-const assertEqual = require('../assertEqual');
+const {assertEqual, emoji, emoji2} = require('../assertEqual');
 
 
 //Test Case
