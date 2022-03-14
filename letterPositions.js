@@ -1,21 +1,21 @@
 
-const letterPositions = function (sentence) {
-  let newSentence = sentence.toLowerCase();
-    let results = {};
-    let index = 0;
+// const letterPositions = function (sentence) {
+//   let newSentence = sentence.toLowerCase();
+//     let results = {};
+//     let index = 0;
     
-    for (const letter of newSentence) {
-        if (results[letter]) {
-            results[letter].push(index);
+//     for (const letter of newSentence) {
+//         if (results[letter]) {
+//             results[letter].push(index);
          
-        } else {
-            results[letter] = [index];
+//         } else {
+//             results[letter] = [index];
         
-        }
-  index++
-    }
-    return results;
-}
+//         }
+//   index++
+//     }
+//     return results;
+// }
 
 
 
@@ -26,12 +26,16 @@ const letterPositions = function (sentence) {
     for (let i = 0; i < newSentence.length; i++) {
       if (results[sentence[i]]) {
         results[sentence[i]].push(i);
+        console.log(results);
       } else {
         results[sentence[i]] = [i];
+        console.log(results);
       }
     }
     return results;
   };
 
 
-console.log(letterPositions("Lighthouselabs"));
+
+
+module.exports = letterPositions;
