@@ -1,6 +1,9 @@
-const {assertEqual, emoji, emoji2} = require('./assertEqual');
+
 const eqArrays = require('./eqArray.js')
 
+
+let emoji = String.fromCodePoint(0x1F621);
+let emoji2 = String.fromCodePoint(128525);
 
 
 const assertArraysEqual = function(arr1, arr2) {
