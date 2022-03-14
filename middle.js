@@ -21,4 +21,4 @@ const middle =  (arr) => {
     return result;
 }
 
-modules.exports = middle;
+module.exports = middle;
