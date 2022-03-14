@@ -1,23 +1,20 @@
 const tail = require('../tail.js');
-const {assertEqual, emoji, emoji2} = require('../assertEqual');
+const assert = require('chai').assert;
 
 
-//Test Case
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-const result = tail(words);
-assertEqual(result.length, 2); 
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
-// Tail function Returning a new array and not modify the original that is passed 
-tail(words); 
-assertEqual(words.length, 3)
-// An array with one one element should yeild an empty array for its tail
 
-const result2 = tail(oneElem);
-assertEqual(result2,[]);
-// An empty array should yield an empty array for its tail
-const emptyArray = [];
-const result3 = tail(emptyArray)
-assertEqual(result3,[]);
+describe("Tail Test", () => {
+  it("returns ['Lighthouse','Labs] for ['Yo Yo', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Yo Yo', 'Lighthouse', 'Labs']), ['Lighthouse','Labs']);
+  });
+  it("returns ['Easter','Day','Christmas'] for ['Halloween', 'Easter', 'Day', 'Christmas']", () => {
+    assert.deepEqual(tail(['Halloween', 'Easter', 'Day', 'Christmas']), ['Easter','Day','Christmas']);
+  });
+  it("An array with one one element should yeild an empty array for its tail", () => {
+    assert.deepEqual(tail(["Hello"]), []);
+  });
+  it(" An empty array should yield an empty array for its tail", () => {
+    assert.deepEqual(tail([]), []);
+  });
 
-// Computer is detecting array as objects 
+});
