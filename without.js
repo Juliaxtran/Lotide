@@ -15,6 +15,4 @@ const without = function (arr, itemsToRemove) {
 }
 
 
-let source = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let itemsToRemove = [4, 5, 6];
-console.log(without(source, itemsToRemove));
+module.exports = without;
