@@ -17,6 +17,7 @@ const result2 = tail(oneElem);
 assertEqual(result2,[]);
 // An empty array should yield an empty array for its tail
 const emptyArray = [];
+const result3 = tail(emptyArray)
 assertEqual(result3,[]);
 
 // Computer is detecting array as objects 
