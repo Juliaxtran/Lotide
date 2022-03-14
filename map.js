@@ -17,10 +17,6 @@ const eqArrays = function (arr1, arr2) {
 
 
 
-
-
-const words = ["ground", "control", "to", "major", "tom"];
-
 const map = function(array, callback) {
     const results = [];
     for (let item of array) {
@@ -29,16 +25,5 @@ const map = function(array, callback) {
     return results;
   }
 
-
-const results1 = map(words, word => word[1]);
-const results2 =map(words, word => word[2]);
-const results3 =map(words, word => word[0]);
-
-
-
-console.log(eqArrays(results1 ,["r", "o", "o","a", "o"]));
-
-console.log(eqArrays(results2 , ["o", "n", "undefined","j", "m"]));
-
-console.log(eqArrays(results3 , ["g", "c", "t","m", "t"]));
+module.exports = map;
   
